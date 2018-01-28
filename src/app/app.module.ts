@@ -8,12 +8,16 @@ import { ExchangeComponent } from './components/exchange/exchange.component';
 import { ExchangeService } from './services/exchange.service';
 import { HttpClientModule } from '@angular/common/http';
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { InputformatPipe } from './pipes/inputformat.pipe';
+import { InputCurrencyDirective } from './directives/input-currency.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ExchangeComponent,
-    NavigationComponent
+    NavigationComponent,
+    InputformatPipe,
+    InputCurrencyDirective
   ],
   imports: [
     BrowserModule,
@@ -21,7 +25,8 @@ import { NavigationComponent } from './components/navigation/navigation.componen
     HttpClientModule
   ],
   providers: [
-    ExchangeService
+    ExchangeService,
+    InputformatPipe
   ],
   bootstrap: [AppComponent]
 })

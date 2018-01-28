@@ -1,5 +1,9 @@
 <div>
-  <input [(ngModel)]="originMoney.amount" placeholder="0.0">
-  <input value="{{destinationMoney.amount}}" readonly>
-  <button (click)="convertMoney()">Convert</button>
+  <div class="container">
+    <input [(ngModel)]="originMoney.amount" placeholder="0.0" appInputCurrency [currency]="originMoney.currency">
+    <input value="{{destinationMoney.amount | inputformat: destinationMoney.currency}}" readonly>
+  </div>
+  <div class="button">
+    <button (click)="convertMoney()">CALCULATE</button>
+  </div>
 </div>

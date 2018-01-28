@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Money } from '../models/money';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { catchError, map, tap } from 'rxjs/operators';
@@ -14,7 +13,7 @@ export class ExchangeService {
   constructor(private http: HttpClient) { }
 
   getExchange(inputCurrency: string, outputCurrency: string): Observable<number> {
-    let exchangeEndPoint: string = `http://api.fixer.io/latest?base=${inputCurrency}&symbols=${outputCurrency}`;
+    const exchangeEndPoint: string = `http://localhost:8080/latest?base=${inputCurrency}&symbols=${outputCurrency}`;
     return this.http.get<ExchangeResponse>(exchangeEndPoint)
     .pipe(
       map((response) => response.rates[outputCurrency]),

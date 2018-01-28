@@ -1,0 +1,24 @@
+div {
+  background-color: darkgrey;
+}
+.container {
+  padding-top: 5%;
+  padding-bottom: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+button {
+  text-align:center;
+  margin-bottom: 2%;
+  background-color: dimgray;
+  color: white;
+  min-width: 25%;
+  min-height: 3em;
+}
+div .button {
+  text-align:center;
+}
+input {
+  min-width: 30%;
+}
