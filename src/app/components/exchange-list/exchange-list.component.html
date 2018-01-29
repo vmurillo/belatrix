@@ -1,0 +1,3 @@
+<ul class="columnList">
+  <li *ngFor="let currency of keys()" class="item">{{currency}} : {{exchangeMap[currency] | inputformat: currency}}</li>
+</ul>

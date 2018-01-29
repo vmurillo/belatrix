@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { InputformatPipe } from './pipes/inputformat.pipe';
 import { InputCurrencyDirective } from './directives/input-currency.directive';
+import { ExchangeListComponent } from './components/exchange-list/exchange-list.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { InputCurrencyDirective } from './directives/input-currency.directive';
     ExchangeComponent,
     NavigationComponent,
     InputformatPipe,
-    InputCurrencyDirective
+    InputCurrencyDirective,
+    ExchangeListComponent
   ],
   imports: [
     BrowserModule,
